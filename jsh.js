@@ -50,7 +50,26 @@ var h = {
         };
     },
     l: (message) => {
-        console.dir(message);
-    }
+        console.dir(message);        
+        if(h.debugDivEnabled){
+            if(!document.querySelector('#debugDiv')){
+                let createDebugDiv = document.createElement('div');
+                createDebugDiv.id = 'debugDiv';
+                createDebugDiv.style.position = 'absolute';
+                createDebugDiv.style.background = 'white';
+                createDebugDiv.style.opacity = '0.8';
+                document.body.appendChild(createDebugDiv);
+            }
+            debugDiv = document.querySelector('#debugDiv');
+            debugDiv.innerHTML += message + '<br>';
+            
+        }
+    },
+    debugDivEnabled: false, 
 };
 
+h.l('test1');
+h.l(h.debugDivEnabled);
+h.debugDivEnabled = true;
+h.l(h.debugDivEnabled);
+h.l('test2');
