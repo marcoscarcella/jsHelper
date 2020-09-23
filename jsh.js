@@ -68,8 +68,3 @@ var h = {
     debugDivEnabled: false, 
 };
 
-h.l('test1');
-h.l(h.debugDivEnabled);
-h.debugDivEnabled = true;
-h.l(h.debugDivEnabled);
-h.l('test2');

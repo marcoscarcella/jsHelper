@@ -50,3 +50,7 @@ Console.dir abbraviato
 ```javascript
 h.l('messaggio');
 ```
+Per abilitare un div visibile sulla pagina
+```javascript
+h.debugDivEnabled = True
+```
