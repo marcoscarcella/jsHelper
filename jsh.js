@@ -58,6 +58,7 @@ var h = {
                 createDebugDiv.style.position = 'absolute';
                 createDebugDiv.style.background = 'white';
                 createDebugDiv.style.opacity = '0.8';
+                createDebugDiv.style.zIndex = '999999';
                 document.body.appendChild(createDebugDiv);
             }
             debugDiv = document.querySelector('#debugDiv');
@@ -66,5 +67,21 @@ var h = {
         }
     },
     debugDivEnabled: false, 
+    makeButton: (text, f, style = false) => {
+        let btn = document.createElement('button');
+        if(!document.querySelector('#btnBar')){
+            let btnBar = document.createElement('div');
+            btnBar.id = 'btnBar';
+            btnBar.style.position = 'absolute';
+            btnBar.style.bottom = '0';     
+            document.body.appendChild(btnBar);
+        }
+        btn.innerText = text;
+        if(style){
+            btn.style.cssText = style;
+        }
+        btn.addEventListener('click', f);
+        btnBar.appendChild(btn);
+    }
 };
 
