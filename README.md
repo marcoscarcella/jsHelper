@@ -54,3 +54,16 @@ Per abilitare un div visibile sulla pagina
 ```javascript
 h.debugDivEnabled = True
 ```
+
+## makeButton
+Inserisce pulsanti nella parte bassa della pagina
+```javascript
+h.makeButton(Testo, callback, inlineStyle);
+```
+Esempio:
+```javascript
+h.makeButton('ciao', function(){
+                                alert('ciao');
+                              }, 'color: red');
+```
+
