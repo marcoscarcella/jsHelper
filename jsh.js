@@ -82,6 +82,8 @@ var h = {
         }
         btn.addEventListener('click', f);
         btnBar.appendChild(btn);
-    }
+    },
+    q: (selector) => { return document.querySelector(selector); },
+    qa: (selector) => { return document.querySelectorAll(selector); },
 };
 
