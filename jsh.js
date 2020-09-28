@@ -56,10 +56,14 @@ var h = {
                 let createDebugDiv = document.createElement('div');
                 createDebugDiv.id = 'debugDiv';
                 createDebugDiv.style.position = 'absolute';
+                createDebugDiv.style.top = '0';
                 createDebugDiv.style.background = 'white';
                 createDebugDiv.style.opacity = '0.8';
                 createDebugDiv.style.zIndex = '999999';
                 document.body.appendChild(createDebugDiv);
+                createDebugDiv.addEventListener('click',function(){
+                    this.remove();
+                })
             }
             debugDiv = document.querySelector('#debugDiv');
             debugDiv.innerHTML += message + '<br>';
