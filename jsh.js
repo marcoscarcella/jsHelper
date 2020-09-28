@@ -50,7 +50,7 @@ var h = {
         };
     },
     l: (message) => {
-        console.dir(message);        
+        console.dir(message);     
         if(h.debugDivEnabled){
             if(!document.querySelector('#debugDiv')){
                 let createDebugDiv = document.createElement('div');
@@ -85,5 +85,29 @@ var h = {
     },
     q: (selector) => { return document.querySelector(selector); },
     qa: (selector) => { return document.querySelectorAll(selector); },
+    keydown : (key = '', callback = () => {}) => {
+        document.addEventListener("keydown", function (zEvent) {
+            if (zEvent.key === key) {
+                callback();
+                zEvent.preventDefault();
+              } 
+        }); 
+    }
 };
 
+/*Object.entries(h).forEach(function(x){
+    window[x[0]] = x[1];
+});
+
+class x {
+    yy = [];
+    y(){
+        console.dir('xx');
+        this.yy.push('xx');
+        console.dir(this.yy);
+    }
+}
+
+xx = new x;
+xx.y();
+*/
