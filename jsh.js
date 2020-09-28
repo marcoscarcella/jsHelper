@@ -55,7 +55,7 @@ var h = {
             if(!document.querySelector('#debugDiv')){
                 let createDebugDiv = document.createElement('div');
                 createDebugDiv.id = 'debugDiv';
-                createDebugDiv.style.position = 'absolute';
+                createDebugDiv.style.position = 'fixed';
                 createDebugDiv.style.top = '0';
                 createDebugDiv.style.background = 'white';
                 createDebugDiv.style.opacity = '0.8';

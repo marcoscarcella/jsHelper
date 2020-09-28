@@ -67,3 +67,26 @@ h.makeButton('ciao', function(){
                               }, 'color: red');
 ```
 
+## q
+Alias di document.querySelector
+```javascript
+h.q(selector);
+```
+
+## qa
+Alias di document.querySelectorAll
+```javascript
+h.q(selector);
+```
+
+## keydown
+Esegue un callback alla pressione di un tasto
+```javascript
+h.keydown(key, callback);
+```
+Esempio:
+```javascript
+h.keydown('a', function(){
+  console.log('a');
+});
+```
