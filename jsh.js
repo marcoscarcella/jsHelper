@@ -49,9 +49,9 @@ var h = {
             send.apply(this, arguments);
         };
     },
-    l: (message) => {
+    l: (message, debugDivSingle = false) => {
         console.dir(message);     
-        if(h.debugDivEnabled){
+        if(h.debugDivEnabled || debugDivSingle){
             if(!document.querySelector('#debugDiv')){
                 let createDebugDiv = document.createElement('div');
                 createDebugDiv.id = 'debugDiv';
