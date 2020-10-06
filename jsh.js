@@ -60,6 +60,10 @@ var h = {
                 createDebugDiv.style.background = 'white';
                 createDebugDiv.style.opacity = '0.8';
                 createDebugDiv.style.zIndex = '999999';
+                createDebugDiv.style.border = '1px red dashed';
+                createDebugDiv.style.padding = '3px';
+                createDebugDiv.style.minWidth = '100px';
+
                 document.body.appendChild(createDebugDiv);
                 createDebugDiv.addEventListener('click',function(){
                     this.remove();
