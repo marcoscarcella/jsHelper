@@ -36,7 +36,8 @@ var h = {
      */
     intercept: (urlmatch, callback) => {
         let send = XMLHttpRequest.prototype.send;
-        XMLHttpRequest.prototype.send = function () {
+        XMLHttpRequest.prototype.send = function (x) {
+            h.l(x);
             this.addEventListener(
                 "readystatechange",
                 function () {
